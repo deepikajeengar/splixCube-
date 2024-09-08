@@ -4,18 +4,17 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MembersService {
+  
   members:any=[]
+
   constructor() { }
 
-  addMember() {
-
+  addMember(data:any) {
+    this.members.push(data)
   }
 
-  delMember() {
-
+  delMember(i:number) {
+    this.members.splice(i,1);
   }
 
-  getAllMembers() {
-    
-  }
 }

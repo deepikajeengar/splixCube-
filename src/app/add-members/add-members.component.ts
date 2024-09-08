@@ -7,19 +7,18 @@ import { MembersService } from '../services/members.service';
   styleUrls: ['./add-members.component.css']
 })
 export class AddMembersComponent {
-  @Input() name: string = '';
-  @Input() age: string = '';
-  
-  @Output() addMember = new EventEmitter<{ name: string, age: string }>();
+  name: string = '';
+  age: string = '';
+
+  constructor(public memberService: MembersService) {
+  }
 
   addMemberToList() {
     if (this.name.trim() && this.age.trim()) {
-      this.addMember.emit({ name: this.name, age: this.age });
+      let x = { name: this.name, age: this.age }
+      this.memberService.addMember(x);
       this.name = '';
       this.age = '';
     }
-  }
-  constructor(public membersService:MembersService) {
-
   }
 }

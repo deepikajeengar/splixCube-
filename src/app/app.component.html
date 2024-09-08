@@ -1,16 +1,31 @@
-<div class="container mt-5">
+<!-- <div class="container mt-5">
     <div class="row">
       <div class="col-lg-6">
         <h3 style="text-align: center;">MEMBERS</h3>
-        <app-add-members (addMember)="addMember($event)"></app-add-members>
+        <app-add-members></app-add-members>
       </div>
       <div class="col-lg-6">
         <h3 style="text-align: center;">List of all Members</h3>
         <br>
-        <div *ngFor="let item of members; let i = index">
-          <app-member-card [member]="item" [index]="i" (delete)="delMember($event)"></app-member-card>
+        <div *ngFor="let item of memberService.members; let i = index">
+          <app-member-card [member]="item" [index]="i" (delete)="memberService.delMember($event)"></app-member-card>
         </div>
       </div>
     </div>
   </div>
-  
+   -->
+
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-6">
+      <h3 style="text-align: center;">MEMBERS</h3>
+      <app-add-members></app-add-members>
+    </div>
+    <div class="col-lg-6">
+      <h3 style="text-align: center;">List of all Members</h3>
+      <br>
+        <app-member-card></app-member-card>
+    </div>
+  </div>
+</div>
