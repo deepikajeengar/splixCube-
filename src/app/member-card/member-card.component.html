@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="card" style="margin-bottom: 10px; padding: 10px;">
+        <h5>Index: {{index + 1}}</h5> <!-- Display as 1-based index -->
+        <h5>Member Name: {{member.name}}</h5>
+        <h5>Member Age: {{member.age}}</h5>
+        <button (click)="delMember()" class="btn btn-danger">Delete</button>
+    </div>
+</div>
