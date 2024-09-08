@@ -1,5 +1,4 @@
 import { Component, Input,EventEmitter, Output} from '@angular/core';
-import { MembersService } from '../services/members.service';
 
 @Component({
   selector: 'app-member-card',
@@ -16,10 +15,4 @@ export class MemberCardComponent {
   delMember() {
     this.delete.emit(this.index);  // Emit the index to the parent for deletion.
   }
-
-
-
-constructor(public membersService:MembersService) {
-
-}
 }

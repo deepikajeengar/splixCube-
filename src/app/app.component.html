@@ -2,7 +2,7 @@
     <div class="row">
       <div class="col-lg-6">
         <h3 style="text-align: center;">MEMBERS</h3>
-        <app-add-members></app-add-members>
+        <app-add-members (addMember)="addMember($event)"></app-add-members>
       </div>
       <div class="col-lg-6">
         <h3 style="text-align: center;">List of all Members</h3>
